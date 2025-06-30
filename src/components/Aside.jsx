@@ -43,6 +43,20 @@ const Aside = () => {
                                 <Link to="/">라우터 테스트</Link>
                             </li>
                         </div>
+                        <div
+                            className={`transition-[max-height] duration-300 ease-in-out overflow-hidden ${isOpen.section3 ? 'max-h-[500px]' : 'max-h-0'}`}
+                        >
+                            <li className='p-4 hover:bg-gray-200 text-slate-700 text-lg'>
+                                <Link to="/gpt">gpt 대답</Link>
+                            </li>
+                        </div>
+                         <div
+                            className={`transition-[max-height] duration-300 ease-in-out overflow-hidden ${isOpen.section3 ? 'max-h-[500px]' : 'max-h-0'}`}
+                        >
+                            <li className='p-4 hover:bg-gray-200 text-slate-700 text-lg'>
+                                <Link to="/city">시/도명 조회</Link>
+                            </li>
+                        </div>
                     </ul>
                 </nav>
 
