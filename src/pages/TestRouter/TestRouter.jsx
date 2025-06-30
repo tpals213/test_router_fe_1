@@ -41,6 +41,32 @@ const TestRouter = () => {
                         <p>답변은 answer 라고 지정 </p>
                         <p>옆 nav 바에 gpt 대답으로 등록 - 경로는 알아서 </p>
                         <p>심화 : isLoading 으로 로딩 처리 해보기 </p>
+                        <div className='py-8 border'>
+                            <p>GPT 통신 방법</p>
+                            <pre>
+                                {`
+
+load_dotenv()
+
+# OpenAI API 키 설정
+api_key = os.getenv("GPT_KEY")
+client = OpenAI(api_key=api_key)
+
+def generate_content(prompt):
+    
+    client = OpenAI(api_key=os.getenv("GPT_KEY"))
+    completion = client.chat.completions.create(
+        model="gpt-4o",
+        messages=[
+            {"role": "user", "content": prompt},
+        ],
+    )
+    return completion.choices[0].message.content
+`}
+                            </pre>
+
+
+                        </div>
                     </div>
                     <div className='pt-8 '>
                         <p className='text-2xl'>2. 사용자가 숫자 입력 후 해당하는 시/도 명 가져오기 </p>
