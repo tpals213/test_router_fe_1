@@ -8,7 +8,7 @@ export const useCommercialDistrictDataDate = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            setLoading(true);
+            setLoading(true);z
             try {
                 const response = await axios.get(`${process.env.REACT_APP_FASTAPI_BASE_URL}/commercial/data/date`);
                 setDataDate(response.data);
